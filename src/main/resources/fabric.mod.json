@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "persephone",
+  "version": "${version}",
+  "name": "Persephone",
+  "description": "",
+  "authors": [],
+  "contact": {
+    "repo": "https://github.com/MayaqqDev/Persephone"
+  },
+  "license": "LGPL-3.0",
+  "icon": "assets/persephone/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "dev.mayaqq.persephone.client.PersephoneClient"
+    ],
+    "main": [
+      "dev.mayaqq.persephone.Persephone"
+    ]
+  },
+  "mixins": [
+    "persephone.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.17",
+    "fabric": "*",
+    "minecraft": "1.19.3"
+  }
+}
