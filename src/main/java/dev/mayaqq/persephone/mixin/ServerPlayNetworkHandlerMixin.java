@@ -5,6 +5,7 @@ import net.minecraft.network.packet.c2s.play.ClientStatusC2SPacket;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.network.ServerPlayNetworkHandler;
 import net.minecraft.server.network.ServerPlayerEntity;
+import net.minecraft.stat.Stats;
 import net.minecraft.world.GameMode;
 import net.minecraft.world.GameRules;
 import net.minecraft.world.World;
@@ -37,6 +38,9 @@ public class ServerPlayNetworkHandlerMixin {
                 if (this.server.isHardcore() && this.player.getScoreboardTags().contains("firstSpawn")) {
                     this.player.changeGameMode(GameMode.SPECTATOR);
                     (this.player.getWorld().getGameRules().get(GameRules.SPECTATORS_GENERATE_CHUNKS)).set(false, this.server);
+                }
+                if (!this.player.getScoreboardTags().contains("firstSpawn")) {
+                    this.player.getStatHandler().setStat(this.player, Stats.CUSTOM.getOrCreateStat(Stats.DEATHS), 0);
                 }
                 player.addScoreboardTag("firstSpawn");
             }

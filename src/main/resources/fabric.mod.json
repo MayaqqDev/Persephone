@@ -3,10 +3,14 @@
   "id": "persephone",
   "version": "${version}",
   "name": "Persephone",
-  "description": "",
-  "authors": [],
+  "description": "Some small utilities for the \"Circle of Time\" modpack.",
+  "authors": [
+    "Mayaqq"
+  ],
   "contact": {
-    "repo": "https://github.com/MayaqqDev/Persephone"
+    "repo": "https://github.com/MayaqqDev/Persephone",
+    "homepage": "https://maya.is-immensely.gay",
+    "sources": "https://github.com/Mayaqq/Persephone"
   },
   "license": "LGPL-3.0",
   "icon": "assets/persephone/icon.png",
@@ -25,6 +29,6 @@
   "depends": {
     "fabricloader": ">=0.14.17",
     "fabric": "*",
-    "minecraft": "1.19.3"
+    "minecraft": "1.19.2"
   }
 }

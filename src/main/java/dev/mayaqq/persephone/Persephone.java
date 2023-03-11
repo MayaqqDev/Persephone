@@ -10,6 +10,7 @@ public class Persephone implements ModInitializer {
 
     @Override
     public void onInitialize() {
+        LOGGER.info("The Queen of the underworld has awoken!");
     }
 
     public interface PlayerExtensions {
