@@ -6,6 +6,7 @@ import io.github.apace100.origins.origin.Origin;
 import io.github.apace100.origins.origin.OriginLayer;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.server.network.ServerPlayerEntity;
+import net.minecraft.world.GameRules;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -19,6 +20,9 @@ public class OriginModPacketsC2SMixin {
             Persephone.PlayerExtensions playerExtensions = (Persephone.PlayerExtensions) player;
             playerExtensions.setJoinInvulnerabilityTicks(0);
             player.damage(firstSpawn(), 1000);
+            if (player.getWorld().getGameRules().getBoolean(GameRules.DO_IMMEDIATE_RESPAWN)) {
+                player.addScoreboardTag("firstSpawn");
+            }
         }
     }
     private static DamageSource firstSpawn() {

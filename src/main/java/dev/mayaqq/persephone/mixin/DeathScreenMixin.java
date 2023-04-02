@@ -2,7 +2,6 @@ package dev.mayaqq.persephone.mixin;
 
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.screen.DeathScreen;
-import net.minecraft.client.gui.screen.StatsScreen;
 import net.minecraft.network.packet.c2s.play.ClientStatusC2SPacket;
 import net.minecraft.stat.Stats;
 import org.spongepowered.asm.mixin.Final;
