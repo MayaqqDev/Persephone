@@ -4,6 +4,7 @@
   "package": "dev.mayaqq.persephone.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "OriginModPacketsC2SMixin",
     "PlayerManagerMixin",
     "ServerPlayerEntityMixin",
     "ServerPlayNetworkHandlerMixin"
